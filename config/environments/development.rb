@@ -64,4 +64,5 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
   config.hosts << "api"
   config.hosts << "host.docker.internal"
+  config.hosts << "stg-sound-hit-back.fly.dev"
 end
