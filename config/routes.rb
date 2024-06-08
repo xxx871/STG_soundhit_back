@@ -9,6 +9,9 @@ Rails.application.routes.draw do
         resources :sessions, only: [:index]
       end
       resources :notes, only: [:index]
+      resources :difficulties, only: [:index]
+      resources :genders, only: [:index]
+      resources :modes, only: [:index]
     end
   end
 end
