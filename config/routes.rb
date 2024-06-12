@@ -20,6 +20,7 @@ Rails.application.routes.draw do
         get 'notes/range/:id', on: :collection, action: :notes_range
       end
       resources :modes, only: [:index]
+      put 'scores/update', to: 'scores#update'
     end
   end
 end
