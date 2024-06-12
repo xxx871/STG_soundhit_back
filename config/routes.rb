@@ -10,9 +10,15 @@ Rails.application.routes.draw do
         post 'oauth', to: 'oauth#create'
       end
       resource :user, only: [:show, :update]
-      resources :notes, only: [:index]
+      resources :notes, only: [:index] do
+        collection do
+          get 'range'
+        end
+      end
       resources :difficulties, only: [:index]
-      resources :genders, only: [:index]
+      resources :genders, only: [:index] do
+        get 'notes/range/:id', on: :collection, action: :notes_range
+      end
       resources :modes, only: [:index]
     end
   end
