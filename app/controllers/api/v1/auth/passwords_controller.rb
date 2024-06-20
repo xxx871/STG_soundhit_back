@@ -14,6 +14,12 @@ module Api
           Rails.logger.debug "Params: #{params.inspect}"
           params.permit(:email, :password, :password_confirmation, :reset_password_token, :redirect_url)
         end
+
+        def redirect_options
+          {
+            allow_other_host: true
+          }
+        end
       end
     end
   end
