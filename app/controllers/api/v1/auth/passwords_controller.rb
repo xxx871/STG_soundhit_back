@@ -11,7 +11,6 @@ module Api
         end
 
         def resource_params
-          Rails.logger.debug "Params: #{params.inspect}"
           params.permit(:email, :password, :password_confirmation, :reset_password_token, :redirect_url)
         end
 
