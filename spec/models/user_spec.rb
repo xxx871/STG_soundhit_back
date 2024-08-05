@@ -9,7 +9,7 @@ RSpec.describe User do
   it { is_expected.to have_many(:scores) }
   it { is_expected.to have_many(:modes).through(:scores) }
   it { is_expected.to have_many(:difficulties).through(:scores) }
-  
+
   it "is valid with valid attributes" do
     user = build(:user)
     expect(user).to be_valid

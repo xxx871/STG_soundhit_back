@@ -43,16 +43,20 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'simplecov', require: false
   gem "shoulda-matchers"
+  gem 'rubocop', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
+  gem 'rubocop-factory_bot', require: false
+  gem 'rubocop-rspec_rails', require: false
 end
 
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-    gem 'letter_opener_web', '~> 2.0'
+  gem 'letter_opener_web', '~> 2.0'
 end
 
-
-gem "dockerfile-rails", ">= 1.6", :group => :development
+gem "dockerfile-rails", ">= 1.6", group: :development
 
 gem "dotenv-rails"
 
