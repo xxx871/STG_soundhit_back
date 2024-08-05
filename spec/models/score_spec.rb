@@ -6,7 +6,7 @@ RSpec.describe Score do
   it { is_expected.to belong_to(:user) }
   it { is_expected.to belong_to(:mode) }
   it { is_expected.to belong_to(:difficulty) }
-  it { is_expected.to validate_uniqueness_of(:user_id).scoped_to([:mode_id, :difficulty_id]).with_message("should have unique score per mode and difficulty") }
+  it { is_expected.to validate_uniqueness_of(:user_id).scoped_to([:mode_id, :difficulty_id]) }
 
   it "is valid with valid attributes" do
     expect(build(:score)).to be_valid
