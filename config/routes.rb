@@ -17,10 +17,10 @@ Rails.application.routes.draw do
           get 'range'
         end
       end
-      resources :difficulties, only: [:index]
       resources :genders, only: [:index] do
         get 'notes/range/:id', on: :collection, action: :notes_range
       end
+      resources :difficulties, only: [:index]
       resources :modes, only: [:index]
       put 'scores/update', to: 'scores#update'
       get 'scores/ranking', to: 'scores#ranking'

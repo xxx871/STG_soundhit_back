@@ -1,4 +1,3 @@
-# app/services/update_user_service.rb
 class UpdateUserService
   def initialize(user, params)
     @user = user
